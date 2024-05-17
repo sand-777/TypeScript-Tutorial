@@ -1,14 +1,18 @@
-let greet : Function;
+type StringOrNum = string | number;
 
-// greet = "hello"
+type objWithName = {name:string,uid:StringOrNum}
 
-greet = ()=>{
-    console.log("hello,again");
+const logDetails = (uid: StringOrNum, item : string)=>{
+    console.log(`${item} has a uid of ${uid}`);
 }
 
-const add = (a:number, b: number,c?:number | string)=>{
-console.log(a + b);
-console.log(c)
+
+const greet = (user: {name:string,uid:StringOrNum}) =>{
+    console.log(`${user.name} says hello`)
 }
 
-add(5,10,'20');
+
+const greetAgain = (user: objWithName) =>{
+    console.log(`${user.name} says hello`)
+}
+
